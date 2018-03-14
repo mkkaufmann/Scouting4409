@@ -2,17 +2,19 @@
 
 <head>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container align-items-center justify-content-center mt-5">
         <form>
             <h1 class="header">Scouting Form</h1>
+            <hr>
             <div class="form-group">
                 <h3>Team Number</h3>
                 <input type="number" class="form-control" id="teamNumber" placeholder="Enter Team Number">
             </div>
+            <hr>
             <h3 class="header">Autonomous</h3>
             <div class="form-radio">
                 <input type="radio" class="form-radio-input" name="auto" id="autoRadio1">
@@ -25,17 +27,62 @@
                 <label class="form-radio-label" for="autoRadio3">Side Switch</label>
                 <br>
                 <input type="radio" class="form-radio-input" name="auto" id="autoRadio4">
-                <label class="form-radio-label" for="autoRadio4">Side Scale</label>
+                <label class="form-radio-label" for="autoRadio4">Scale</label>
+                <br>
+                <input type="radio" class="form-radio-input" name="auto" id="autoRadio4">
+                <label class="form-radio-label" for="autoRadio4">Baseline</label>
                 <br>
             </div>
             <div class="form-group">
-                <p class="font-weight-bold">Cubes in Autonomous</p>
-                <input type="number" class="form-control" id="teamNumber" value=1>
+                <label class="font-weight-bold">Cubes in Autonomous</label>
+                <input type="number" class="form-control" id="autoCubes" value=0>
+                <label class="font-weight-bold">Notes on Autonomous</label>
+                <input type="text" class="form-control" id="autoNotes" placeholder="Enter Notes">
             </div>
+            <hr>
+            <h3 class="header">Teleoperated</h3>
             <div class="form-group">
-                <p class="font-weight-bold">Notes on Autonomous</p>
-                <input type="number" class="form-control" id="teamNumber" placeholder="Enter Notes">
+                <label class="font-weight-bold">Cubes in Own Switch</label>
+                <input type="number" class="form-control" id="teleopSwitch1" value=0>
+                <label class="font-weight-bold">Cubes in Opponent's Switch</label>
+                <input type="number" class="form-control" id="teleopSwitch2" value=0>
+                <label class="font-weight-bold">Cubes in Scale</label>
+                <input type="number" class="form-control" id="teleopScale" value=0>
+                <label class="font-weight-bold">Cubes in Exchange</label>
+                <input type="number" class="form-control" id="teleopExchange" value=0>
+                <label class="font-weight-bold">Notes on Teleoperated</label>
+                <input type="text" class="form-control" id="teleopNotes" placeholder="Enter Notes">
             </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="hang1">
+                <label class="font-weight-bold form-check-label" for="hang1">Hangs itself</label>
+                <br>
+                <input type="checkbox" class="form-check-input" id="hang2">
+                <label class="font-weight-bold form-check-label" for="hang2">Hangs others</label>
+            </div>
+            <br>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="strategy1">
+                <label class="font-weight-bold form-check-label" for="strategy1">Offense</label>
+                <br>
+                <input type="checkbox" class="form-check-input" id="strategy2">
+                <label class="font-weight-bold form-check-label" for="strategy2">Defense</label>
+            </div>
+            <hr>
+            <h3 class="header">On a Scale from 1-10 (Higher is Better)</h3>
+
+            <label class="font-weight-bold" for="robotSpeed">Speed of Robot</label>
+            <input type="number" class="form-control" id="robotSpeed" value=1 min=1 max=10>
+            <label class="font-weight-bold" for="cubeProficiency1">Proficiency at Picking up Cubes</label>
+            <input type="number" class="form-control" id="cubeProficiency1" value=1 min=1 max=10>
+            <label class="font-weight-bold" for="cubeProficiency2">Proficiency at Keeping Hold of Cubes</label>
+            <input type="number" class="form-control" id="cubeProficiency2" value=1 min=1 max=10>
+            <label class="font-weight-bold" for="cubeProficiency3">Proficiency at Placing Cubes</label>
+            <input type="number" class="form-control" id="cubeProficiency3" value=1 min=1 max=10>
+            <hr>
+            <h3 class="header">Additional Notes</h3>
+            <input type="text" class="form-control" id="autoNotes" placeholder="Enter Notes">
+            <hr>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
@@ -43,6 +90,7 @@
     <script src="./jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
